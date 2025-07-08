@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>200 Repeated Ads</title>
+  <meta http-equiv="refresh" content="100;url=https://test180.netlify.app">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .ad-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ad-container">
+    <script>
+      const adHTML = `
+<script type="text/javascript">
+	atOptions = {
+		'key' : '92ac00a83427f30c6c00f8f2ab4ab37c',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//decomposemanly.com/92ac00a83427f30c6c00f8f2ab4ab37c/invoke.js"></script>
+      `;
+
+      const container = document.querySelector('.ad-container');
+      for (let i = 0; i < 200; i++) {
+        const adWrapper = document.createElement('div');
+        adWrapper.innerHTML = adHTML;
+        container.appendChild(adWrapper);
+      }
+    </script>
+  </div>
+</body>
+</html>
